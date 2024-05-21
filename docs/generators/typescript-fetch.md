@@ -45,7 +45,7 @@ These options may be applied as additional-properties (cli) or configOptions (pl
 |useSingleRequestParameter|Setting this property to true will generate functions with a single argument containing all API endpoint parameters instead of one argument per parameter.| |true|
 |withInterfaces|Setting this property to true will generate interfaces next to the default class implementations.| |false|
 |withoutRuntimeChecks|Setting this property to true will remove any runtime checks on the request and response payloads. Payloads will be casted to their expected types.| |false|
-
+|throwOnNotOk|This will throw an error when the response returns a non-200 status code. Disable to handle status codes yourself.| |true|
 ## IMPORT MAPPING
 
 | Type/Alias | Imports |

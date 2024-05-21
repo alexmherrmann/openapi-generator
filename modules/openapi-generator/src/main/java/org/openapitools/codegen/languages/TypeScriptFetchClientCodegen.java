@@ -48,6 +48,7 @@ public class TypeScriptFetchClientCodegen extends AbstractTypeScriptClientCodege
     public static final String USE_SINGLE_REQUEST_PARAMETER = "useSingleRequestParameter";
     public static final String PREFIX_PARAMETER_INTERFACES = "prefixParameterInterfaces";
     public static final String WITHOUT_RUNTIME_CHECKS = "withoutRuntimeChecks";
+    public static final String THROW_ON_NOT_OK = "throwOnNotOk";
     public static final String STRING_ENUMS = "stringEnums";
     public static final String STRING_ENUMS_DESC = "Generate string enums instead of objects for enum values.";
     public static final String IMPORT_FILE_EXTENSION_SWITCH = "importFileExtension";
@@ -64,6 +65,7 @@ public class TypeScriptFetchClientCodegen extends AbstractTypeScriptClientCodege
     protected boolean addedApiIndex = false;
     protected boolean addedModelIndex = false;
     protected boolean withoutRuntimeChecks = false;
+    protected boolean throwOnNotOk = false;
     protected boolean stringEnums = false;
     protected String fileNaming = PASCAL_CASE;
 
@@ -174,6 +176,14 @@ public class TypeScriptFetchClientCodegen extends AbstractTypeScriptClientCodege
 
     public void setWithoutRuntimeChecks(Boolean withoutRuntimeChecks) {
         this.withoutRuntimeChecks = withoutRuntimeChecks;
+    }
+
+    public Boolean getThrowOnNotOk() {
+        return throwOnNotOk;
+    }
+
+    public void setThrowOnNotOk(Boolean throwOnNotOk) {
+        this.throwOnNotOk = throwOnNotOk;
     }
 
     public Boolean getStringEnums() {
